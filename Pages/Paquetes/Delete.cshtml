@@ -1,0 +1,48 @@
+@page
+@model ClubCentury.Pages.Paquetes.DeleteModel
+
+@{
+    ViewData["Title"] = "Eliminar-Paquete";
+}
+
+<h1>Eliminar</h1>
+
+<p class="text-danger">@Model.ErrorMessage</p>
+
+<h3>¿Estas seguro de que quieres eliminarlo?</h3>
+<div>
+    <h4>Paquete</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Costo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Costo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Duracion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Duracion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Privilegios)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Privilegios)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Paquete.PaqueteID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Volver a la lista</a>
+    </form>
+</div>

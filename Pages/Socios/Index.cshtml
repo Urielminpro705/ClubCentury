@@ -1,0 +1,97 @@
+@page
+@model ClubCentury.Pages.Socios.IndexModel
+
+@{
+    ViewData["Title"] = "Socios-Inicio";
+}
+
+<h1>Socios</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por nombre:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Socios[0].Nombre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socios[0].Apellido_Paterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socios[0].Apellido_Materno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socios[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socios[0].Correo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var item in Model.Socios)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_Materno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SocioID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.SocioID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SocioID">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Socios.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Socios.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Socios.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Socios.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>

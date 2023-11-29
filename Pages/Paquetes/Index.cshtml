@@ -1,0 +1,95 @@
+@page
+@model ClubCentury.Pages.Paquetes.IndexModel
+
+@{
+    ViewData["Title"] = "Paquete-Inicio";
+}
+
+<h1>Paquetes</h1>
+
+<p>
+    <a asp-page="Create">Crear nuevo</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por nombre:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Paquetes[0].PaqueteID)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Paquetes[0].Nombre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paquetes[0].Costo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paquetes[0].Duracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paquetes[0].Privilegios)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Paquetes) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaqueteID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Costo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Privilegios)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PaqueteID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.PaqueteID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PaqueteID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Paquetes.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Paquetes.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Paquetes.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Paquetes.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>

@@ -1,0 +1,74 @@
+@page
+@model ClubCentury.Pages.Socios.CreateModel
+
+@{
+    ViewData["Title"] = "Crear-Socio";
+}
+
+<h1>Crear</h1>
+
+<h4>Socio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Socio.Nombre" class="control-label"></label>
+                <input asp-for="Socio.Nombre" class="form-control" />
+                <span asp-validation-for="Socio.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Apellido_Paterno" class="control-label"></label>
+                <input asp-for="Socio.Apellido_Paterno" class="form-control" />
+                <span asp-validation-for="Socio.Apellido_Paterno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Apellido_Materno" class="control-label"></label>
+                <input asp-for="Socio.Apellido_Materno" class="form-control" />
+                <span asp-validation-for="Socio.Apellido_Materno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Curp" class="control-label"></label>
+                <input asp-for="Socio.Curp" class="form-control" />
+                <span asp-validation-for="Socio.Curp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Domicilio" class="control-label"></label>
+                <input asp-for="Socio.Domicilio" class="form-control" />
+                <span asp-validation-for="Socio.Domicilio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Telefono" class="control-label"></label>
+                <input asp-for="Socio.Telefono" class="form-control" />
+                <span asp-validation-for="Socio.Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.Correo" class="control-label"></label>
+                <input asp-for="Socio.Correo" class="form-control" />
+                <span asp-validation-for="Socio.Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.ClubID" class="control-label"></label>
+                <select asp-for="Socio.ClubID" class ="form-control" asp-items="ViewBag.ClubID"></select>
+                <span asp-validation-for="Socio.ClubID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Socio.PaqueteID" class="control-label"></label>
+                <select asp-for="Socio.PaqueteID" class ="form-control" asp-items="ViewBag.PaqueteID"></select>
+                <span asp-validation-for="Socio.PaqueteID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,101 @@
+@page
+@model ClubCentury.Pages.Empleados.IndexModel
+
+@{
+    ViewData["Title"] = "Empleados-inicio";
+}
+
+<h1>Empleados</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por nombre:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Empleados[0].Nombre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Apellido_Paterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Apellido_Materno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Curp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].ClubID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Empleados) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido_Materno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Curp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClubID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EmpleadoID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.EmpleadoID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EmpleadoID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Empleados.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Empleados.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Empleados.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Empleados.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>

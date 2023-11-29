@@ -1,0 +1,95 @@
+@page
+@model ClubCentury.Pages.Clubs.IndexModel
+
+@{
+    ViewData["Title"] = "Club-Inicio";
+}
+
+<h1>Clubs</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por direccion:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Clubs[0].ClubID)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DireccionSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Clubs[0].Direccion)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clubs[0].Cp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clubs[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clubs[0].Correo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Clubs) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClubID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ClubID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.ClubID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ClubID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Clubs.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Clubs.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Clubs.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Clubs.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>

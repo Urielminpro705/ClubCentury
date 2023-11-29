@@ -1,0 +1,50 @@
+@page
+@model ClubCentury.Pages.Talleres.EditModel
+
+@{
+    ViewData["Title"] = "Editar-Taller";
+}
+
+<h1>Editar</h1>
+
+<h4>Taller</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Taller.TallerID" />
+            <div class="form-group">
+                <label asp-for="Taller.Nombre" class="control-label"></label>
+                <input asp-for="Taller.Nombre" class="form-control" />
+                <span asp-validation-for="Taller.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taller.Duracion" class="control-label"></label>
+                <input asp-for="Taller.Duracion" class="form-control" />
+                <span asp-validation-for="Taller.Duracion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taller.Ubicacion" class="control-label"></label>
+                <input asp-for="Taller.Ubicacion" class="form-control" />
+                <span asp-validation-for="Taller.Ubicacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taller.horario" class="control-label"></label>
+                <input asp-for="Taller.horario" class="form-control" />
+                <span asp-validation-for="Taller.horario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

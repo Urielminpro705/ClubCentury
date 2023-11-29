@@ -1,0 +1,67 @@
+@page
+@model ClubCentury.Pages.Paquetes.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles-Paquete";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Paquete</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.PaqueteID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.PaqueteID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Costo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Costo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Duracion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Duracion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Privilegios)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Paquete.Privilegios)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Paquete.Socios)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre del Socio</th>
+                </tr>
+                @foreach (var item in Model.Paquete.Socios)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Paquete.PaqueteID">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
+</div>

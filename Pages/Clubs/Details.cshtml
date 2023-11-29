@@ -1,0 +1,85 @@
+@page
+@model ClubCentury.Pages.Clubs.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles-Club";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Club</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.ClubID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Club.ClubID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Direccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Club.Direccion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Cp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Club.Cp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Telefono)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Club.Telefono)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Correo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Club.Correo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Socios)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre del socio</th>
+                </tr>
+                @foreach (var item in Model.Club.Socios)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Club.Empleados)
+        </dt>
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre del empleado</th>
+                </tr>
+                @foreach (var item in Model.Club.Empleados)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Club.ClubID">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
+</div>

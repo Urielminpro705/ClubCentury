@@ -1,0 +1,80 @@
+@page
+@model ClubCentury.Pages.Inscripciones.IndexModel
+
+@{
+    ViewData["Title"] = "Inscripcion-Inicio";
+}
+
+<h1>Inscripciones</h1>
+
+<p>
+    <a asp-page="Create">Crear nueva</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Buscar por nombre del socio:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Inscripciones[0].Socio.Nombre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inscripciones[0].TallerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inscripciones[0].SocioID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Inscripciones)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Socio.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TallerID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SocioID)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.InscripcionID">Editar</a> |
+                    <a asp-page="./Details" asp-route-id="@item.InscripcionID">Detalles</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.InscripcionID">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Inscripciones.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Inscripciones.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index" asp-route-sortOrder="@Model.CurrentSort"
+    asp-route-pageIndex="@(Model.Inscripciones.PageIndex - 1)" asp-route-currentFilter="@Model.CurrentFilter"
+    class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index" asp-route-sortOrder="@Model.CurrentSort"
+    asp-route-pageIndex="@(Model.Inscripciones.PageIndex + 1)" asp-route-currentFilter="@Model.CurrentFilter"
+    class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>

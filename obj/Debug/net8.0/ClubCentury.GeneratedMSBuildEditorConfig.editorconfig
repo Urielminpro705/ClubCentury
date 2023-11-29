@@ -1,0 +1,175 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ClubCentury
+build_property.RootNamespace = ClubCentury
+build_property.ProjectDir = C:\Users\uriel\Desktop\ClubCentury\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\uriel\Desktop\ClubCentury
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Clubs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Clubs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Clubs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Clubs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Clubs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2x1YnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Empleados/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Empleados/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Empleados/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Empleados/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Empleados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Inscripciones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Inscripciones/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25lc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Inscripciones/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25lc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Inscripciones/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Inscripciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zY3JpcGNpb25lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Paquetes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFxdWV0ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Paquetes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFxdWV0ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Paquetes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFxdWV0ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Paquetes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFxdWV0ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Paquetes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFxdWV0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Socios/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaW9zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Socios/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaW9zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Socios/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaW9zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Socios/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaW9zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Socios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29jaW9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Talleres/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFsbGVyZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Talleres/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFsbGVyZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Talleres/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFsbGVyZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Talleres/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFsbGVyZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Talleres/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGFsbGVyZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/uriel/Desktop/ClubCentury/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-d5urqxhe4x

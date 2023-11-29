@@ -1,0 +1,89 @@
+@page
+@model ClubCentury.Pages.Talleres.IndexModel
+
+@{
+    ViewData["Title"] = "Talleres-Inicio";
+}
+
+<h1>Talleres</h1>
+
+<p>
+    <a asp-page="Create">Crear Nuevo</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Encontrar por nombre:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Buscar" class="btn btn-primary" /> |
+            <a asp-page="./Index">Volver a la lista completa</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                    asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Talleres[0].Nombre)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Talleres[0].Duracion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Talleres[0].Ubicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Talleres[0].horario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Talleres) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ubicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.horario)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.TallerID">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.TallerID">Detalles</a> |
+                <a asp-page="./Delete" asp-route-id="@item.TallerID">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Talleres.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Talleres.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Talleres.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Anterior
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Talleres.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Siguiente
+</a>
